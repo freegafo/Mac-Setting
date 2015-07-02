@@ -1,0 +1,33 @@
+alias s='open -a "Sublime Text"'
+
+#Go to
+alias lh='cd /Library/WebServer/Documents/'
+alias chef='cd ~/dev/chef'
+alias dev='cd ~/dev/'
+alias cooker='cd /Library/WebServer/Documents/cooker/wp-content/themes/cooker'
+alias wl='cd ~/dev/wl/'
+alias cn='cd ~/dev/cn/'
+
+alias sgs='ssh -i ~/gafo.pem ubuntu@ec2-54-77-198-207.eu-west-1.compute.amazonaws.com'
+
+
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+	colorflag="--color"
+else # OS X `ls`
+	colorflag="-G"
+fi
+
+# List all files colorized in long format
+alias l="ls -l ${colorflag}"
+
+# List all files colorized in long format, including dot files
+alias la="ls -la ${colorflag}"
+alias ll='ls -la ${colorflag}'
+
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+alias g="git"
+alias v="vagrant"
